@@ -1,0 +1,175 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-accent);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+    border-color: var(--accent);
+}
+
+.sidebar {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-right: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.listTitle {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.listItem {
+    background: none;
+    border: none;
+    text-align: left;
+    color: var(--text-secondary);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.listItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.listItemActive {
+    background: var(--bg-secondary);
+    color: var(--accent-cyan);
+    font-weight: 500;
+}
+
+.info {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-light);
+}
+
+.info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.meaning {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.statRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.mapContainer {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(16, 21, 30, 0.8) 0%, rgba(5, 5, 8, 1) 100%);
+}
+
+.svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    overflow: visible;
+}
+
+.constellationLine {
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+.star {
+    transition: r 0.3s ease;
+    cursor: pointer;
+}
+
+.starHalo {
+    opacity: 0.2;
+    filter: blur(4px);
+    animation: pulse 3s infinite;
+}
+
+.starGroup:hover .star {
+    fill: var(--accent-cyan);
+}
+
+.starLabel {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--accent-cyan);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.1;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .listItem {
+        white-space: nowrap;
+    }
+
+    .mapContainer {
+        height: 400px;
+    }
+}
