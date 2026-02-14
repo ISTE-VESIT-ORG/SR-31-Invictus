@@ -1,0 +1,122 @@
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.section {
+    animation: fadeInUp 0.6s ease both;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sectionHeader h2 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+/* Aurora Info */
+.auroraCard {
+    padding: 32px;
+}
+
+.auroraCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.auroraCard>p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.auroraFacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.fact {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.factIcon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.fact strong {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.fact span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Tips */
+.tipsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tipCard {
+    padding: 24px;
+    text-align: center;
+}
+
+.tipIcon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.tipCard h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.tipCard p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .auroraFacts {
+        grid-template-columns: 1fr;
+    }
+
+    .tipsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tipsGrid {
+        grid-template-columns: 1fr;
+    }
+}

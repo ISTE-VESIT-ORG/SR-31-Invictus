@@ -1,0 +1,89 @@
+.tabBar {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.tabBtn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.tabBtn:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+}
+
+.tabActive {
+    background: rgba(6, 214, 160, 0.1);
+    border-color: rgba(6, 214, 160, 0.3);
+    color: var(--accent-cyan);
+}
+
+.tabDesc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.tabContent {
+    animation: fadeInUp 0.4s ease;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.section {
+    animation: fadeInUp 0.6s ease both;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sectionHeader h2 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.sectionDesc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .tabBar {
+        gap: 4px;
+    }
+
+    .tabBtn {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+    }
+}

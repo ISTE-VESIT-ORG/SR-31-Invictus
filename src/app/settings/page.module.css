@@ -1,0 +1,80 @@
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+}
+
+.settingsSection {
+    padding: 28px;
+}
+
+.settingsSection h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.settingsDesc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.currentLocation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.coords {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.noData {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.locationControls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.manualInput {
+    display: flex;
+    gap: 8px;
+}
+
+.manualInput .input {
+    flex: 1;
+}
+
+.dangerZone {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.dangerBtn {
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--accent-orange);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.dangerBtn:hover {
+    background: rgba(255, 107, 53, 0.2);
+}
+
+.credits {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
