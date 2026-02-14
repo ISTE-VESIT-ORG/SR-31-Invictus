@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a3e"/>
+      <stop offset="100%" stop-color="#060B18"/>
+    </radialGradient>
+    <linearGradient id="star" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#4C9FFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#bg)"/>
+  <circle cx="60" cy="50" r="2" fill="#ffffff" opacity="0.5"/>
+  <circle cx="140" cy="40" r="1.5" fill="#ffffff" opacity="0.4"/>
+  <circle cx="35" cy="120" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="155" cy="130" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="100" cy="30" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="45" cy="160" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="160" cy="80" r="1" fill="#ffffff" opacity="0.3"/>
+  <!-- Star symbol -->
+  <path d="M96 45 L108 78 L143 78 L115 98 L125 132 L96 112 L67 132 L77 98 L49 78 L84 78 Z" fill="url(#star)" opacity="0.9"/>
+  <text x="96" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#E0E7FF" letter-spacing="2">CELESTIA</text>
+</svg>
