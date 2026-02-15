@@ -1,0 +1,196 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.locationBar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputRow {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.inputGroup label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.quickCities {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.loadingMsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 0;
+}
+
+.loadingMsg p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.errorMsg {
+    padding: 16px 20px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: #FBBF24;
+    font-size: 0.85rem;
+}
+
+.dataTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Current conditions */
+.currentGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.currentCard {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.currentHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currentIcon {
+    font-size: 1.2rem;
+}
+
+.currentRange {
+    display: flex;
+    gap: 12px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.sparkline {
+    margin-top: 4px;
+}
+
+.currentDesc {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-top: 4px;
+}
+
+/* Climatology table */
+.climatologySection {
+    padding-top: 16px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.climatologySection h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.climTableWrap {
+    overflow-x: auto;
+    border-radius: var(--card-radius);
+    border: 1px solid var(--glass-border);
+}
+
+.climTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    min-width: 700px;
+}
+
+.climTable thead th {
+    padding: 10px 8px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+}
+
+.climTable tbody td {
+    padding: 8px;
+    text-align: center;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.paramCell {
+    text-align: left !important;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text-primary) !important;
+    min-width: 160px;
+}
+
+.unit {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.68rem;
+}
+
+.valCell {
+    font-variant-numeric: tabular-nums;
+}
+
+.annCell {
+    font-weight: 700;
+    color: var(--accent-cyan) !important;
+    background: rgba(6, 214, 160, 0.06) !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .currentGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .inputRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .currentGrid {
+        grid-template-columns: 1fr;
+    }
+}
