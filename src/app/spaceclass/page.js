@@ -282,11 +282,7 @@ export default function SpaceClassPage() {
                             allowFullScreen
                             allow="fullscreen; autoplay"
                         />
-                        <div className={styles.nasaEyesOverlay}>
-                            <a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank" rel="noopener noreferrer" className={styles.nasaEyesLink}>
-                                Open Full Screen ↗
-                            </a>
-                        </div>
+                       
                     </div>
                 </section>
 
