@@ -1,0 +1,196 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 95vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: scaleUp 0.3s ease;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.closeBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.imageStage {
+    position: relative;
+    flex: 1;
+    background: #000;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImage {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+
+.navBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.prev {
+    left: 16px;
+}
+
+.next {
+    right: 16px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.activeDot {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+.content {
+    padding: 24px;
+    background: linear-gradient(to top, var(--bg-secondary), var(--bg-card));
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.year {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    opacity: 0.3;
+}
+
+.desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.meta {
+    display: flex;
+    gap: 12px;
+}
+
+.pill {
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

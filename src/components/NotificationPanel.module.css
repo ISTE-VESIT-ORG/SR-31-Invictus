@@ -1,0 +1,408 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ===== STATUS SECTION ===== */
+.statusSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.statusRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.statusInfo {
+    flex: 1;
+}
+
+.statusIndicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.dotActive {
+    background: #00f0ff;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.dotDenied {
+    background: #ff4444;
+    box-shadow: 0 0 8px rgba(255, 68, 68, 0.4);
+}
+
+.statusText {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.statusDesc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Toggle Button */
+.toggleBtn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.toggleBtn:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: rgba(0, 240, 255, 0.06);
+}
+
+.toggleActive {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.3);
+    color: var(--accent);
+}
+
+.toggleBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--text-muted);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Test button */
+.testBtn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: 1px dashed var(--border-light);
+    background: transparent;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    width: fit-content;
+}
+
+.testBtn:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 240, 255, 0.03);
+}
+
+.testBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== CATEGORIES ===== */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sectionLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.categoryGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.categoryCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+.categoryCard:hover {
+    border-color: var(--border-light);
+    background: var(--bg-card-hover);
+}
+
+.categoryActive {
+    border-color: rgba(0, 240, 255, 0.2);
+    background: rgba(0, 240, 255, 0.04);
+}
+
+.categoryIcon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.categoryInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.categoryLabel {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.categoryDesc {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* Mini toggle switch */
+.categoryToggle {
+    width: 36px;
+    height: 20px;
+    border-radius: 10px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.categoryToggleOn {
+    background: rgba(0, 240, 255, 0.2);
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.categoryToggleDot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all var(--transition-fast);
+}
+
+.categoryToggleOn .categoryToggleDot {
+    transform: translateX(16px);
+    background: var(--accent);
+    box-shadow: 0 0 6px rgba(0, 240, 255, 0.5);
+}
+
+/* ===== EVENTS TIMELINE ===== */
+.eventsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.eventCard {
+    display: flex;
+    gap: 16px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    transition: all var(--transition-fast);
+}
+
+.eventCard:hover {
+    border-color: var(--border-light);
+    background: var(--bg-card-hover);
+}
+
+.eventDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.eventIcon {
+    font-size: 1.4rem;
+}
+
+.eventDateInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.eventFormattedDate {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.eventBadge {
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badgeToday {
+    background: rgba(0, 240, 255, 0.15);
+    color: #00f0ff;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.badgeTomorrow {
+    background: rgba(255, 170, 0, 0.12);
+    color: #ffaa00;
+    border: 1px solid rgba(255, 170, 0, 0.25);
+}
+
+.badgeWeek {
+    background: rgba(130, 100, 255, 0.1);
+    color: #a088ff;
+    border: 1px solid rgba(130, 100, 255, 0.2);
+}
+
+.eventDaysUntil {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.eventContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.eventTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.eventDesc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.noEvents {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* ===== UNSUPPORTED ===== */
+.unsupported {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 170, 0, 0.2);
+    background: rgba(255, 170, 0, 0.05);
+}
+
+.unsupportedIcon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.unsupportedTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffaa00;
+    margin-bottom: 4px;
+}
+
+.unsupported p:not(.unsupportedTitle) {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .statusRow {
+        flex-direction: column;
+    }
+
+    .toggleBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .eventCard {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .eventDate {
+        flex-direction: row;
+        min-width: unset;
+    }
+}
