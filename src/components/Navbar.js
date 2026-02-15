@@ -34,7 +34,7 @@ export default function Navbar() {
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.navInner}>
                 <Link href="/" className={styles.logo}>
-                    <span className={styles.logoText}>Celestia</span>
+                    <img src="/icon-192.png" alt="Celestia Logo" className={styles.logoIcon} style={{ height: '56px', width: 'auto' }} />
                 </Link>
 
                 <div className={`${styles.navLinks} ${mobileOpen ? styles.navLinksOpen : ''}`}>

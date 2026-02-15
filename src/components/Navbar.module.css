@@ -141,6 +141,13 @@
 }
 
 @media (max-width: 900px) {
+    .navbar {
+        background: #0a0a0a !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .navLinks {
         position: fixed;
         top: var(--nav-height);
@@ -148,12 +155,17 @@
         right: 0;
         bottom: 0;
         flex-direction: column;
-        background: rgba(10, 10, 10, 0.97);
-        backdrop-filter: blur(20px);
+
+        background: #0a0a0a !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         padding: 24px;
         gap: 8px;
         transform: translateX(100%);
         transition: transform var(--transition-base);
+        z-index: 999;
     }
 
     .navLinksOpen {
