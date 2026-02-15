@@ -1,0 +1,156 @@
+.section {
+    width: 100%;
+    scroll-margin-top: 100px;
+    margin-bottom: 120px;
+    /* Space between Meteor Showers and Comets */
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.sectionHeader h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.headerIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionDesc {
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.highlight {
+    background: linear-gradient(120deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0.1));
+    color: var(--accent-cyan);
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Visualization Frame */
+.visualizationFrame {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--border-accent);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    /* Cyan glow */
+    transition: all 0.3s ease;
+}
+
+.visualizationFrame:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+    border-color: var(--accent);
+}
+
+.visualizationFrame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Comet Grid */
+.cometGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.cometCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.cometCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+}
+
+.cometImageWrapper {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cometImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.cometCard:hover .cometImage {
+    transform: scale(1.1);
+}
+
+.cometTag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cometContent {
+    padding: 20px;
+}
+
+.cometContent h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.cometType {
+    color: var(--accent-purple);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cometDesc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cometStats {
+    border-top: 1px solid var(--border-light);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

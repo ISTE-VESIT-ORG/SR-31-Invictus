@@ -1,0 +1,60 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mapContainer {
+    height: 420px;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: #0a0f1e;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(6, 11, 24, 0.85);
+    z-index: 1000;
+    gap: 12px;
+}
+
+.overlay p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.coordCard {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@media (max-width: 768px) {
+    .mapContainer {
+        height: 320px;
+    }
+
+    .info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+}

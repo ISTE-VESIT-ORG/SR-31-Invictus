@@ -1,0 +1,79 @@
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-purple);
+    background: rgba(124, 58, 237, 0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.helpZone {
+    display: flex;
+    gap: 10px;
+}
+
+.body {
+    margin-bottom: 20px;
+}
+
+.glossary {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border-light);
+}
+
+.glossary h4 {
+    margin: 0 0 16px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.termsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.termItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 255, 200, 0.05);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.termItem:hover {
+    background: rgba(0, 255, 200, 0.1);
+    border-color: var(--accent-cyan);
+}
+
+.termName {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
