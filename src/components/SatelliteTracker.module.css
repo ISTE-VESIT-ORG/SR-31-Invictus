@@ -1,0 +1,285 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.statBadges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ===== Map ===== */
+.mapContainer {
+    position: relative;
+    height: 500px;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: #0a0f1e;
+}
+
+.loadingOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(6, 11, 24, 0.85);
+    z-index: 1000;
+    gap: 12px;
+}
+
+.loadingOverlay p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.satMarker {
+    background: none !important;
+    border: none !important;
+}
+
+/* ===== Info Panel ===== */
+.infoPanel {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+/* ===== Satellite List ===== */
+.satList {
+    padding: 0;
+}
+
+.listTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    background: var(--bg-card);
+    z-index: 1;
+}
+
+.listCount {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+}
+
+.listItems {
+    display: flex;
+    flex-direction: column;
+}
+
+.satItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.15s;
+    width: 100%;
+    color: inherit;
+    font-family: inherit;
+}
+
+.satItem:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.satItemDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 6px currentColor;
+}
+
+.satItemInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.satItemName {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.satItemMeta {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.satItemArrow {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+/* ===== Detail Panel ===== */
+.detailPanel {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: var(--accent-cyan);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    font-family: inherit;
+}
+
+.backBtn:hover {
+    text-decoration: underline;
+}
+
+.detailHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.detailDot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.detailHeader h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.noradId {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* Position grid */
+.posGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.posItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.posItem .statValue {
+    font-size: 1rem;
+}
+
+/* Orbit info */
+.orbitInfo {
+    padding-top: 16px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.orbitInfo h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.orbitItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.orbitItem {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.orbitLabel {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    min-width: 120px;
+    color: var(--text-muted);
+}
+
+.dragDesc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .mapContainer {
+        height: 350px;
+    }
+
+    .posGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .posGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .orbitLabel {
+        min-width: 90px;
+    }
+}

@@ -1,0 +1,116 @@
+.section {
+    width: 100%;
+    scroll-margin-top: 100px;
+    margin-bottom: 120px;
+    /* Space after Constellation section */
+}
+
+#stellarium-mobile-plus-img {
+    visibility: hidden;
+}
+
+#stellarium-mobile-plus-img {
+    display: none !important;
+}
+
+.container.pa-0 {
+    display: none !important;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.sectionHeader h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.headerIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionDesc {
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.highlight {
+    background: linear-gradient(120deg, rgba(0, 240, 255, 0.2), rgba(0, 240, 255, 0.1));
+    color: var(--accent-cyan);
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Stellarium Web Section */
+.stellariumWrapper {
+    margin-top: 60px;
+}
+
+.subHeading {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.stellariumDesc {
+    max-width: 700px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.visualizationFrame {
+    width: 100%;
+    height: 700px;
+    border: 1px solid var(--border-accent);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    /* Cyan glow */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.visualizationFrame:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+    border-color: var(--accent);
+}
+
+.iframe {
+    width: calc(100% + 300px);
+    /* Increase width to push sidebar out */
+    height: 100%;
+    border: none;
+    margin-left: -300px;
+    /* Shift left to hide the sidebar */
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .visualizationFrame {
+        height: 500px;
+    }
+
+    #stellarium-mobile-plus-img {
+        display: none;
+    }
+
+    .subHeading {
+        font-size: 1.4rem;
+    }
+}
