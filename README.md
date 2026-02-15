@@ -3,21 +3,21 @@
 
 **Celestia** is a next-generation interactive space education and exploration platform. It combines real-time data from NASA, advanced 3D visualizations, and AI-powered explanations to make the cosmos accessible to everyone—from curious kids to serious stargazers.
 
-## 🚀 Why Celestia?
+## Why Celestia?
 
 Unlike static websites, Celestia is **alive**. It connects to over 10 different real-time APIs to show you what's happening in space *right now*.
 
-### ✨ Key Features
-- **🧠 AI Space Tutor**: Ask any question, and our Gemini-powered AI explains it simply with fun facts.
-- **🔭 Stargazing Forecast (ML)**: A machine learning model analyzes your local weather, moon phase, and light pollution to predict tonight's visibility.
-- **🛰️ Live Satellite Tracker**: Track the ISS and other satellites in real-time with SGP4 orbit propagation.
-- **🌪️ Earth Watch**: Monitor natural disasters (wildfires, storms) and climate data live from space.
-- **✨ Cosmos Guide**: Interactive guides to constellations, meteor showers, and comets.
-- **📱 PWA Support**: Installable as a native app with push notifications for celestial events.
+### Key Features
+- ** AI Space Tutor**: Ask any question, and our Gemini-powered AI explains it simply with fun facts.
+- ** Stargazing Forecast (ML)**: A machine learning model analyzes your local weather, moon phase, and light pollution to predict tonight's visibility.
+- ** Live Satellite Tracker**: Track the ISS and other satellites in real-time with SGP4 orbit propagation.
+- ** Earth Watch**: Monitor natural disasters (wildfires, storms) and climate data live from space.
+- ** Cosmos Guide**: Interactive guides to constellations, meteor showers, and comets.
+- ** PWA Support**: Installable as a native app with push notifications for celestial events.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework**: [Next.js](https://nextjs.org/) (React)
@@ -32,7 +32,7 @@ Unlike static websites, Celestia is **alive**. It connects to over 10 different 
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Node.js (v18+)
@@ -90,7 +90,7 @@ python ml/app.py
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 celestia/
@@ -110,8 +110,8 @@ celestia/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
-## 📄 License
+## License
 This project is open-source and available under the MIT License.
