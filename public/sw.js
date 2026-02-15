@@ -27,6 +27,30 @@ self.addEventListener('activate', (event) => {
     self.clients.claim();
 });
 
+// Fetch: serve from cache, fall back to network
+self.addEventListener('fetch', (event) => {
+    // Skip cross-origin requests
+    if (!event.request.url.startsWith(self.location.origin)) return;
+
+    // For page navigations, try network first, then cache, then offline page
+    if (event.request.mode === 'navigate') {
+        event.respondWith(
+            fetch(event.request)
+                .catch(() => {
+                    return caches.match(OFFLINE_URL);
+                })
+        );
+        return;
+    }
+
+    // For other resources, try cache first, then network
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request);
+        })
+    );
+});
+
 // Push notification received
 self.addEventListener('push', (event) => {
     let data = {
