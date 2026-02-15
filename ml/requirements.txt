@@ -1,2 +1,10 @@
 random
 pandas
+pandas
+flask
+requests
+scikit-learn
+joblib
+google-generativeai
+python-dotenv
+apscheduler
