@@ -1,0 +1,7 @@
+.tableWrapper {
+    overflow-x: auto;
+    border-radius: var(--card-radius);
+    border: 1px solid var(--glass-border);
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+}

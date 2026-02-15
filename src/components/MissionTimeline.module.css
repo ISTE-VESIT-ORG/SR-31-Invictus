@@ -1,0 +1,135 @@
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    /* Space for scrollbar or hover effects */
+}
+
+/* Hide scrollbar for clean look */
+.timeline::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 27px;
+    /* Align with dots */
+    height: 2px;
+    background: var(--border-light);
+    z-index: 0;
+    width: 100%;
+}
+
+.item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    /* Space for line and dot */
+}
+
+/* Remove zig-zag specific classes */
+.itemLeft,
+.itemRight {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 3px solid var(--bg-primary);
+    /* Cutout effect */
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    white-space: normal;
+    /* Allow text wrapping inside card */
+    transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.year {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.agency {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hint {
+    display: none;
+    /* Hide hint for cleaner horizontal look, visual cues are enough */
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 200px;
+    }
+}
