@@ -1,10 +1,6 @@
 # Celestia 
 # SR -31 
 
-
-https://v0-clst.vercel.app
-
-
 **Celestia** is a next-generation interactive space education and exploration platform. It combines real-time data from NASA, advanced 3D visualizations, and AI-powered explanations to make the cosmos accessible to everyone—from curious kids to serious stargazers.
 
 ## Why Celestia?
