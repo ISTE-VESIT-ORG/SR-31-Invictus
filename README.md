@@ -8,12 +8,12 @@
 Unlike static websites, Celestia is **alive**. It connects to over 10 different real-time APIs to show you what's happening in space *right now*.
 
 ### Key Features
-- ** AI Space Tutor**: Ask any question, and our Gemini-powered AI explains it simply with fun facts.
-- ** Stargazing Forecast (ML)**: A machine learning model analyzes your local weather, moon phase, and light pollution to predict tonight's visibility.
-- ** Live Satellite Tracker**: Track the ISS and other satellites in real-time with SGP4 orbit propagation.
-- ** Earth Watch**: Monitor natural disasters (wildfires, storms) and climate data live from space.
-- ** Cosmos Guide**: Interactive guides to constellations, meteor showers, and comets.
-- ** PWA Support**: Installable as a native app with push notifications for celestial events.
+- **AI Space Tutor**: Ask any question, and our Gemini-powered AI explains it simply with fun facts.
+- **Stargazing Forecast (ML)**: A machine learning model analyzes your local weather, moon phase, and light pollution to predict tonight's visibility.
+- **Live Satellite Tracker**: Track the ISS and other satellites in real-time with SGP4 orbit propagation.
+- **Earth Watch**: Monitor natural disasters (wildfires, storms) and climate data live from space.
+- **Cosmos Guide**: Interactive guides to constellations, meteor showers, and comets.
+- **PWA Support**: Installable as a native app with push notifications for celestial events.
 
 ---
 
